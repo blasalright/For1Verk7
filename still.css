@@ -1,0 +1,366 @@
+:root {
+	color-scheme: light;
+	--ink: #26302a;
+	--muted: #68716b;
+	--paper: #ffffff;
+	--white: #ffffff;
+	--coral: #66836c;
+	--line: #e5e9e5;
+	--serif: system-ui, sans-serif;
+	--sans: system-ui, sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font-family: var(--sans);
+	line-height: 1.6;
+}
+
+a {
+	color: inherit;
+}
+
+.site-header {
+	min-height: 76px;
+	padding: 0 7vw;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--white);
+	border-bottom: 1px solid var(--line);
+}
+
+.wordmark {
+	font-family: var(--serif);
+	font-size: 1.8rem;
+	font-weight: 700;
+	line-height: 1;
+	text-decoration: none;
+}
+
+.wordmark span {
+	color: var(--coral);
+}
+
+.site-header nav {
+	display: flex;
+	gap: clamp(1rem, 3vw, 2.8rem);
+}
+
+.site-header nav a {
+	font-size: 0.88rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.site-header nav a:hover,
+.site-footer a:hover {
+	color: var(--coral);
+}
+
+.hero {
+	min-height: min(500px, 68vh);
+	padding: 6vw 10vw;
+	position: relative;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	background-color: #edf2ed;
+	background-image: linear-gradient(90deg, #fff 0%, rgb(255 255 255 / 95%) 35%, rgb(255 255 255 / 60%) 58%, rgb(255 255 255 / 5%) 100%), url("https://upload.wikimedia.org/wikipedia/commons/c/cc/Bj%C3%B6rk_at_Cannes.jpg");
+	background-position: center, right center;
+	background-repeat: no-repeat;
+	background-size: cover, auto 100%;
+	color: var(--ink);
+}
+
+.hero-copy {
+	max-width: 600px;
+}
+
+.eyebrow,
+.section-label {
+	font-size: 0.76rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.eyebrow {
+	margin: 0 0 1rem;
+	color: #536e59;
+}
+
+.hero h1 {
+	margin: 0;
+	font-family: var(--serif);
+	font-size: clamp(3.5rem, 8vw, 6rem);
+	line-height: 0.98;
+}
+
+.hero-intro {
+	max-width: 440px;
+	margin: 1.5rem 0 2rem;
+	font-size: 1.1rem;
+}
+
+.text-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.75rem;
+	padding-bottom: 0.35rem;
+	border-bottom: 1px solid currentColor;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.hero-caption {
+	position: absolute;
+	right: 7vw;
+	bottom: 1.5rem;
+	margin: 0;
+	color: var(--muted);
+	font-size: 0.75rem;
+}
+
+.hero-caption a {
+	text-decoration: none;
+}
+
+.hero-caption a:hover {
+	text-decoration: underline;
+}
+
+.section-wrap {
+	width: min(1100px, 86vw);
+	margin: 0 auto;
+}
+
+.about {
+	padding: 75px 0 85px;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1rem;
+}
+
+.section-label {
+	color: var(--muted);
+}
+
+.about h2,
+.music-layout h2 {
+	margin: 0;
+	font-family: var(--serif);
+	font-weight: 600;
+	line-height: 1.12;
+}
+
+.about h2 {
+	max-width: 570px;
+	margin-bottom: 1.5rem;
+	font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.about-copy p {
+	max-width: 760px;
+	color: #505952;
+}
+
+.music-band {
+	padding: 65px 0;
+	background: var(--white);
+	border-top: 1px solid var(--line);
+	border-bottom: 1px solid var(--line);
+}
+
+.music-layout {
+	display: grid;
+	grid-template-columns: 0.85fr 1.15fr;
+	align-items: center;
+	gap: 8vw;
+}
+
+.music-layout h2 {
+	margin-top: 1.2rem;
+	font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.music-layout > div:first-child > p {
+	color: #505952;
+}
+
+.spotify-frame {
+	overflow: hidden;
+	background: var(--white);
+	border: 1px solid var(--line);
+}
+
+.spotify-frame iframe {
+	display: block;
+	border: 0;
+}
+
+.map-header {
+	margin-bottom: 1.5rem;
+}
+
+.map-header h2 {
+	margin: 0;
+	font-family: var(--serif);
+	font-weight: 600;
+	font-size: clamp(2rem, 4vw, 3.2rem);
+	line-height: 1.12;
+}
+
+.map-frame {
+	overflow: hidden;
+	border: 1px solid var(--line);
+	background: var(--white);
+	border-radius: 18px;
+	box-shadow: 0 12px 28px rgb(18 25 22 / 6%);
+}
+
+.map-frame iframe {
+	display: block;
+	width: 100%;
+	height: 420px;
+	border: 0;
+}
+
+.site-footer {
+	padding: 1.5rem 7vw 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	background: var(--white);
+	color: var(--ink);
+	border-top: 1px solid var(--line);
+}
+
+.simple-page {
+	padding-top: 65px;
+	padding-bottom: 80px;
+}
+
+.simple-page h1 {
+	margin: 1rem 0 3rem;
+	font-family: var(--serif);
+	font-size: clamp(2.8rem, 7vw, 5rem);
+	line-height: 1;
+}
+
+.simple-page section {
+	max-width: 760px;
+	padding: 2rem 0;
+	border-top: 1px solid var(--line);
+}
+
+.simple-page h2 {
+	margin: 0 0 1rem;
+	font-family: var(--serif);
+	font-size: clamp(1.8rem, 3vw, 2.5rem);
+	line-height: 1.1;
+}
+
+.simple-page p {
+	color: #505952;
+}
+
+.simple-page li {
+	margin-bottom: 0.65rem;
+}
+
+.simple-page a {
+	color: var(--coral);
+}
+
+.footer-map-wrap {
+	width: min(1100px, 86vw);
+	margin: 0 auto;
+}
+
+.footer-brand-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: min(1100px, 86vw);
+	margin: 0 auto;
+}
+
+.site-footer .footer-brand-row > a:last-child {
+	font-size: 0.88rem;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+@media (max-width: 700px) {
+	.site-header {
+		min-height: 68px;
+		padding: 0 6vw;
+	}
+
+	.site-header nav {
+		gap: 1rem;
+	}
+
+	.site-header nav a {
+		font-size: 0.76rem;
+	}
+
+	.hero {
+		min-height: 470px;
+		padding: 5rem 7vw;
+		background-image: linear-gradient(90deg, rgb(255 255 255 / 96%), rgb(255 255 255 / 82%) 50%, rgb(255 255 255 / 38%)), url("https://upload.wikimedia.org/wikipedia/commons/c/cc/Bj%C3%B6rk_at_Cannes.jpg");
+		background-position: center, right center;
+		background-size: cover, auto 100%;
+	}
+
+	.hero-caption {
+		right: 7vw;
+	}
+
+	.section-wrap {
+		width: 86vw;
+	}
+
+	.about,
+	.music-layout {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+
+	.about {
+		padding: 75px 0 85px;
+	}
+
+	.music-band {
+		padding: 70px 0;
+	}
+
+	.site-footer {
+		padding: 1.5rem 7vw;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		scroll-behavior: auto !important;
+	}
+}
